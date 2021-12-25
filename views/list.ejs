@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            border: solid 1px;
+            margin: 0;
+            padding: 2%;
+            display: inline-block;
+            width: 15%;
+            border-bottom: none;
+        }
+        form{
+            margin-top: 5%;
+        }
+        hr{
+            
+            width: 19%;
+            display: inline-block;
+            position: relative;
+            bottom: 8.5px;
+            
+            
+        }
+        #btn{
+            margin-top: 1%;
+            margin-bottom: 3%;
+            width: 20.4%;
+            background-color: #1a89ec;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            
+        }
+        #btn:hover{
+            background-color: blue;
+        }
+        input{
+            padding: 5px;
+            
+        }
+    </style>
+    <% for(let i = 0; i < list.length; i++){ %>
+        <div><%=list[i]%></div><br>
+    <% } %>
+        <hr>
+    
+    <form action="/" method="post">
+        <input type="text" name="text1" id="text1" value="" placeholder="Enter something.">
+        <br><input id="btn" type="submit" value="Add">
+    </form>
+</body>
+</html>
